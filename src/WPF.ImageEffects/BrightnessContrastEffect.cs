@@ -12,19 +12,19 @@ namespace WPF.ImageEffects
     /// <summary>
     /// BrightContrastEffect
     /// </summary>
-    public class BrightContrastEffect : ShaderEffect
+    public class BrightnessContrastEffect : ShaderEffect
     {
         public static readonly DependencyProperty InputProperty =
-        ShaderEffect.RegisterPixelShaderSamplerProperty("Input", typeof(BrightContrastEffect), 0);
+        ShaderEffect.RegisterPixelShaderSamplerProperty("Input", typeof(BrightnessContrastEffect), 0);
 
         public static readonly DependencyProperty BrightnessProperty =
-            DependencyProperty.Register(nameof(Brightness), typeof(double), typeof(BrightContrastEffect), new UIPropertyMetadata(0.0, PixelShaderConstantCallback(0)));
+            DependencyProperty.Register(nameof(Brightness), typeof(double), typeof(BrightnessContrastEffect), new UIPropertyMetadata(0.0, PixelShaderConstantCallback(0)));
 
         public static readonly DependencyProperty ContrastProperty =
-            DependencyProperty.Register(nameof(Contrast), typeof(double), typeof(BrightContrastEffect), new UIPropertyMetadata(0.0, PixelShaderConstantCallback(1)));
+            DependencyProperty.Register(nameof(Contrast), typeof(double), typeof(BrightnessContrastEffect), new UIPropertyMetadata(0.0, PixelShaderConstantCallback(1)));
 
 
-        public BrightContrastEffect()
+        public BrightnessContrastEffect()
         {
             PixelShader = new PixelShader() { UriSource = new Uri(@"pack://application:,,,/WPF.ImageEffects;component/Shaders/ImageShader.fxc") };
             UpdateShaderValue(InputProperty);

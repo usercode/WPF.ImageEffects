@@ -21,7 +21,7 @@
 
         <Image x:Name="image" Grid.Row="2" Stretch="Uniform" Margin="10">
             <Image.Effect>
-                <imageeffects:BrightContrastEffect Brightness="{Binding Value, ElementName=sliderBrightness, Mode=TwoWay}" 
+                <imageeffects:BrightnessContrastEffect Brightness="{Binding Value, ElementName=sliderBrightness, Mode=TwoWay}" 
                                                    Contrast="{Binding Value, ElementName=sliderContrast, Mode=TwoWay}" />
             </Image.Effect>
         </Image>

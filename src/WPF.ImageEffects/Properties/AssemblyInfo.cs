@@ -7,9 +7,9 @@ using System.Windows.Markup;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("WPF.ImageEffects")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("GPU-based image effects (brightness, contrast) for WPF")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("usercode")]
 [assembly: AssemblyProduct("WPF.ImageEffects")]
 [assembly: AssemblyCopyright("Copyright ©  2018")]
 [assembly: AssemblyTrademark("")]
