@@ -1,0 +1,29 @@
+﻿<Window x:Class="WPF.ImageEffects.Demo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:imageeffects="http://usercode.de/wpf.imageeffects"
+        xmlns:local="clr-namespace:WPF.ImageEffects.Demo"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="600" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        
+        
+        <Slider Grid.Row="0" x:Name="sliderBrightness" Minimum="-1" Maximum="1" Value="0" Margin="10" LargeChange="0.1" SmallChange="0.001" />
+
+        <Slider Grid.Row="1" x:Name="sliderContrast" Minimum="-1" Maximum="1" Value="0" Margin="10" />
+
+        <Image x:Name="image" Grid.Row="2" Stretch="Uniform" Margin="10">
+            <Image.Effect>
+                <imageeffects:BrightContrastEffect Brightness="{Binding Value, ElementName=sliderBrightness, Mode=TwoWay}" 
+                                                   Contrast="{Binding Value, ElementName=sliderContrast, Mode=TwoWay}" />
+            </Image.Effect>
+        </Image>
+    </Grid>
+</Window>
