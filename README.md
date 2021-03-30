@@ -7,12 +7,12 @@ https://www.nuget.org/packages/WPF.ImageEffects
 
 ## How to use it ##
 
-1. Add namespace ("http://usercode.de/wpf.imageeffects") to root node:
+1. Add clr namespace to root node:
 
 ```XAML
 <Window x:Class="WPF.ImageEffects.Demo.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:imageeffects="http://usercode.de/wpf.imageeffects"
+        xmlns:imageeffects="clr-namespace:WPF.ImageEffects;assembly=WPF.ImageEffects"
         xmlns:local="clr-namespace:WPF.ImageEffects.Demo"
         Title="MainWindow">
 ```
