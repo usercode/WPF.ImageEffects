@@ -26,7 +26,7 @@ namespace WPF.ImageEffects.Demo
 
             BitmapImage img = new BitmapImage();
             img.BeginInit();
-            img.UriSource = new Uri("pack://application:,,,/WPF.ImageEffects.Demo;component/photo.jpeg");
+            img.UriSource = new Uri("pack://application:,,,/photo.jpeg");
             img.EndInit();
 
             image.Source = img;
