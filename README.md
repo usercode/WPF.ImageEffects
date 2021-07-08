@@ -3,7 +3,9 @@ GPU-based image effects (brightness, contrast) for WPF
 
 https://www.nuget.org/packages/WPF.ImageEffects
 
-[![nuget](https://img.shields.io/nuget/v/WPF.ImageEffects.svg)](https://www.nuget.org/packages/WPF.ImageEffects)
+[![nuget](https://img.shields.io/nuget/v/WPF.ImageEffects.svg)](https://www.nuget.org/packages/WPF.ImageEffects) for WPF Core (.NET 5)
+
+[![nuget](https://img.shields.io/nuget/v/WPF.ImageEffects.svg)](https://www.nuget.org/packages/WPF.ImageEffects/1.0.2) for WPF (.NET 4.6)
 
 ## How to use it ##
 
