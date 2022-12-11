@@ -23,13 +23,6 @@ namespace WPF.ImageEffects.Demo
         public MainWindow()
         {
             InitializeComponent();
-
-            BitmapImage img = new BitmapImage();
-            img.BeginInit();
-            img.UriSource = new Uri("pack://application:,,,/photo.jpeg");
-            img.EndInit();
-
-            image.Source = img;
         }
     }
 }

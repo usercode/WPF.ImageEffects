@@ -6,7 +6,7 @@
         xmlns:imageeffects="clr-namespace:WPF.ImageEffects;assembly=WPF.ImageEffects"
         xmlns:local="clr-namespace:WPF.ImageEffects.Demo"
         mc:Ignorable="d"
-        Title="MainWindow" Height="600" Width="800">
+        Title="MainWindow" Height="400" Width="800">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
@@ -14,16 +14,30 @@
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
         
-        
-        <Slider Grid.Row="0" x:Name="sliderBrightness" Minimum="-1" Maximum="1" Value="0" Margin="10" LargeChange="0.1" SmallChange="0.001" />
+        <!--Brithness-->
+        <Slider Grid.Row="0" x:Name="sliderBrightness" Minimum="-1" Maximum="1" Value="0" Margin="10" />
 
+        <!--Contrast-->
         <Slider Grid.Row="1" x:Name="sliderContrast" Minimum="-1" Maximum="1" Value="0" Margin="10" />
 
-        <Image x:Name="image" Grid.Row="2" Stretch="Uniform" Margin="10">
-            <Image.Effect>
-                <imageeffects:BrightnessContrastEffect Brightness="{Binding Value, ElementName=sliderBrightness}" 
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            
+            <!--Image 1-->
+            <Image Grid.Column="0" Source="pack://application:,,,/photo.jpeg" Stretch="Fill" Margin="10" />
+
+            <!--Image 2-->
+            <Image Grid.Column="1" Source="pack://application:,,,/photo.jpeg" Stretch="Fill" Margin="10">
+                <Image.Effect>
+                    <!--Effect-->
+                    <imageeffects:BrightnessContrastEffect 
+                                                   Brightness="{Binding Value, ElementName=sliderBrightness}" 
                                                    Contrast="{Binding Value, ElementName=sliderContrast}" />
-            </Image.Effect>
-        </Image>
+                </Image.Effect>
+            </Image>
+        </Grid>
     </Grid>
 </Window>

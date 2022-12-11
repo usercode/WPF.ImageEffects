@@ -15,10 +15,10 @@ jobs:
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: 5.0.x
+        dotnet-version: 6.0.x
     - name: Build with dotnet
-      run: dotnet build --configuration Release "./src/WPF.ImageEffects.Demo.sln"    
+      run: dotnet build --configuration Release "./src/WPF.ImageEffects/WPF.ImageEffects.csproj"
     - name: Create the package
-      run: dotnet pack --configuration Release "./src/WPF.ImageEffects.Demo.sln"
+      run: dotnet pack --configuration Release "./src/WPF.ImageEffects/WPF.ImageEffects.csproj"
     - name: Publish "WPF.ImageEffects" to nuget
       run: dotnet nuget push "./src/WPF.ImageEffects/bin/Release/*.nupkg" -s "https://api.nuget.org/v3/index.json" -k ${{secrets.NUGET_API_KEY}}
