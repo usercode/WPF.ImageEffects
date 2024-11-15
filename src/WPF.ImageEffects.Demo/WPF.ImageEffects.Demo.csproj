@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net6.0-windows</TargetFramework>
+    <TargetFramework>net8.0-windows</TargetFramework>
     <UseWPF>true</UseWPF>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <RootNamespace>WPF.ImageEffects.Demo</RootNamespace>
@@ -11,6 +11,7 @@
 
   <ItemGroup>
     <None Remove="photo.jpeg" />
+    <None Remove="photo.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -19,5 +20,6 @@
 
   <ItemGroup>
     <Resource Include="photo.jpeg" />
+    <Resource Include="photo.png" />
   </ItemGroup>  
 </Project>

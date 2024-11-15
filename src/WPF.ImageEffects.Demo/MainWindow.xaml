@@ -20,17 +20,17 @@
         <!--Contrast-->
         <Slider Grid.Row="1" x:Name="sliderContrast" Minimum="-1" Maximum="1" Value="0" Margin="10" />
 
-        <Grid Grid.Row="2">
+        <Grid Grid.Row="2" Background="SteelBlue">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
             
             <!--Image 1-->
-            <Image Grid.Column="0" Source="pack://application:,,,/photo.jpeg" Stretch="Fill" Margin="10" />
+            <Image Grid.Column="0" Source="pack://application:,,,/photo.png" Stretch="Fill" Margin="10" />
 
             <!--Image 2-->
-            <Image Grid.Column="1" Source="pack://application:,,,/photo.jpeg" Stretch="Fill" Margin="10">
+            <Image Grid.Column="1" Source="pack://application:,,,/photo.png" Stretch="Fill" Margin="10">
                 <Image.Effect>
                     <!--Effect-->
                     <imageeffects:BrightnessContrastEffect 
